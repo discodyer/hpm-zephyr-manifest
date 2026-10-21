@@ -1,0 +1,31 @@
+manifest:
+  version: "1.0"
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: hpmicro
+      url-base: https://github.com/hpmicro
+    - name: YOUR_GITHUB_ORG
+      url-base: https://github.com/YOUR_GITHUB_ORG
+
+  defaults:
+    remote: YOUR_GITHUB_ORG
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+      import: true
+
+    - name: hpm_sdk
+      remote: hpmicro
+      revision: v1.13.0
+      path: modules/hal/hpm_sdk
+
+    - name: hpm-zephyr
+      revision: main
+      path: modules/hpm-zephyr
+
+  self:
+    path: manifest
