@@ -6,11 +6,11 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: hpmicro
       url-base: https://github.com/hpmicro
-    - name: YOUR_GITHUB_ORG
-      url-base: https://github.com/YOUR_GITHUB_ORG
+    - name: discodyer
+      url-base: https://github.com/discodyer
 
   defaults:
-    remote: YOUR_GITHUB_ORG
+    remote: discodyer
 
   projects:
     - name: zephyr
