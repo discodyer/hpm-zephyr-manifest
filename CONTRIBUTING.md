@@ -1,14 +1,12 @@
 # Contributing
 
-Use Conventional Commits and sign off every commit with the Developer
-Certificate of Origin:
+Use Zephyr's upstream format for local initial-development changes:
 
 ```sh
-git commit -s -m "feat(manifest): track upstream Zephyr main"
+git commit -m "west: track upstream Zephyr main"
 ```
 
-Enable the commit-message hook once per clone:
-
-```sh
-git config core.hooksPath .githooks
-```
+Local commits do not require DCO sign-off, and no local commit-message hook is
+enforced during initial development. When preparing changes for upstream Zephyr,
+follow Zephyr's contribution rules, run its official checks, and have the human
+contributor add the required DCO sign-off.
