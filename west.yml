@@ -20,7 +20,7 @@ manifest:
 
     - name: hpm_sdk
       remote: hpmicro
-      revision: v1.13.0
+      revision: ccc5ec467a047f3ea85cd2fa4565e91db7135a38
       path: modules/hal/hpm_sdk
 
     - name: hpm-zephyr

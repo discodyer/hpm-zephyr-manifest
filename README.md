@@ -6,6 +6,10 @@ The manifest imports upstream Zephyr so that its module revisions follow the
 selected Zephyr revision. HPM SDK and the HPM Zephyr module are separate
 projects.
 
+The HPM SDK project uses the full upstream tree and is currently pinned to the
+`v1.13.0` commit `ccc5ec467a047f3ea85cd2fa4565e91db7135a38`. Release manifests
+must resolve all projects to immutable commit SHAs.
+
 ## Initialize
 
 Set the repository URLs in `west.yml`, then run:
