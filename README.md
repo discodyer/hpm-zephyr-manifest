@@ -22,6 +22,14 @@ west update
 
 ## Freeze a release
 
+Validate the development manifest and, in particular, the full-SHA HPM SDK pin:
+
+```sh
+python3 scripts/check_manifest.py
+```
+
+Then create a release lock file:
+
 ```sh
 west manifest --freeze -o west-lock.yml
 ```
