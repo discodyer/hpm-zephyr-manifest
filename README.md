@@ -7,8 +7,10 @@ selected Zephyr revision. HPM SDK and the HPM Zephyr module are separate
 projects.
 
 The HPM SDK project uses the full upstream tree and is currently pinned to the
-`v1.13.0` commit `ccc5ec467a047f3ea85cd2fa4565e91db7135a38`. Release manifests
-must resolve all projects to immutable commit SHAs.
+`v1.13.0` commit `ccc5ec467a047f3ea85cd2fa4565e91db7135a38`. The `hpm-zephyr`
+module is also pinned to a full commit SHA. The development manifest still
+tracks upstream Zephyr `main`; release manifests must freeze every project to
+an immutable commit SHA.
 
 ## Initialize
 
@@ -22,7 +24,7 @@ west update
 
 ## Freeze a release
 
-Validate the development manifest and, in particular, the full-SHA HPM SDK pin:
+Validate the development manifest and the immutable SDK/module pins:
 
 ```sh
 python3 scripts/check_manifest.py

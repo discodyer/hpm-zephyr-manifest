@@ -2,7 +2,7 @@
 # Copyright (c) 2026 The HPM Zephyr Module Contributors
 # SPDX-License-Identifier: Apache-2.0
 
-"""Validate manifest placeholders and the immutable HPM SDK pin."""
+"""Validate manifest placeholders and immutable vendor/module pins."""
 
 from pathlib import Path
 import sys
@@ -37,4 +37,15 @@ if not re.fullmatch(r"[0-9a-f]{40}", hpm_sdk_revision):
     )
     raise SystemExit(1)
 
-print("west manifest vendor SDK pin: OK")
+hpm_zephyr_revision = project_revision("hpm-zephyr")
+if hpm_zephyr_revision is None:
+    print("error: hpm-zephyr project is missing from west.yml", file=sys.stderr)
+    raise SystemExit(1)
+if not re.fullmatch(r"[0-9a-f]{40}", hpm_zephyr_revision):
+    print(
+        "error: hpm-zephyr must be pinned to a full 40-character commit SHA",
+        file=sys.stderr,
+    )
+    raise SystemExit(1)
+
+print("west manifest immutable pins: OK")
