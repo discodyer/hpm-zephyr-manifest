@@ -15,7 +15,7 @@ manifest:
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      revision: main
+      revision: 41d10b59730406bbab4ca9f1fbbe9e96aafb4966
       import: true
 
     - name: hpm_sdk
@@ -24,7 +24,7 @@ manifest:
       path: modules/hal/hpm_sdk
 
     - name: hpm-zephyr
-      revision: c84e01a9b203b78ddcad3298beeca8802464414b
+      revision: f716094120f69d9d61d5d97a9980f40226ae89ca
       path: modules/hpm-zephyr
 
   self:
