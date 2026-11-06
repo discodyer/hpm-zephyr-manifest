@@ -24,7 +24,7 @@ manifest:
       path: modules/hal/hpm_sdk
 
     - name: hpm-zephyr
-      revision: 10ea4c3461343336d9db6b454136f14bf6c1bdf1
+      revision: refs/heads/main
       path: modules/hpm-zephyr
 
     - name: openocd-zephyr
