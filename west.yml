@@ -27,5 +27,10 @@ manifest:
       revision: 10ea4c3461343336d9db6b454136f14bf6c1bdf1
       path: modules/hpm-zephyr
 
+    - name: openocd-zephyr
+      revision: 986968d99077e01f48c4dba269342bcd70669fa9
+      path: openocd-zephyr
+
   self:
     path: manifest
+    west-commands: scripts/west-commands.yml

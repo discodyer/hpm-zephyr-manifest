@@ -1,1 +1,3 @@
 /west-lock.yml
+__pycache__/
+*.pyc

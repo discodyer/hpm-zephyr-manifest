@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 The HPM Zephyr Module Contributors
+# Copyright (c) 2026 Cody Gu <gujiaqi@iscas.ac.cn>
 # SPDX-License-Identifier: Apache-2.0
 
 """Validate manifest placeholders and immutable project pins."""
@@ -27,7 +28,7 @@ def project_revision(name: str) -> str | None:
     return match.group(1) if match else None
 
 
-for project in ("zephyr", "hpm_sdk", "hpm-zephyr"):
+for project in ("zephyr", "hpm_sdk", "hpm-zephyr", "openocd-zephyr"):
     revision = project_revision(project)
     if revision is None:
         print(f"error: {project} project is missing from west.yml", file=sys.stderr)
